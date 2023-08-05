@@ -6,6 +6,7 @@ import preact from "@astrojs/preact"
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://site.endigma.dev",
 	markdown: {
 		shikiConfig: {
 			theme: "github-dark-dimmed",
