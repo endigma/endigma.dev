@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string
+	hero?: boolean
+	heroTitle?: string
+}
+
+const { title, hero = true, heroTitle } = Astro.props
+
+import TitleHero from "$components/TitleHero.astro"
+import Layout from "$layouts/Layout.astro"
+import "$styles/prose.css"
+---
+
+<Layout title={title}>
+	{hero && <TitleHero title={heroTitle ? heroTitle : title} />}
+	<main class="w-full mx-auto max-w-4xl px-8">
+		<slot />
+	</main>
+</Layout>

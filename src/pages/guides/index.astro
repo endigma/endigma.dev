@@ -1,0 +1,13 @@
+---
+import GuideLink from "$components/GuideLink.astro"
+import Page from "$layouts/Page.astro"
+
+const guides = await Astro.glob("./*.md")
+---
+
+<Page title="Guides">
+	<p>Here is where I store some poorly written reference guides for doing various things.</p>
+	<div class="flex flex-col gap-2 mt-4">
+		{guides.map((guide) => <GuideLink title={guide.frontmatter.title} href={guide.url} />)}
+	</div>
+</Page>

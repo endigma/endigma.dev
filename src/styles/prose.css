@@ -1,0 +1,82 @@
+.prose h1 {
+	--at-apply: text-4xl font-semibold mb-1 mt-4;
+}
+
+.prose h2 {
+	--at-apply: text-3xl font-semibold mb-1 mt-4;
+}
+
+.prose h3 {
+	--at-apply: text-2xl font-semibold mb-1 mt-4;
+}
+
+.prose h4 {
+	--at-apply: text-xl font-semibold mb-1 mt-4;
+}
+
+.prose h5 {
+	--at-apply: text-lg font-semibold mb-1 mt-4;
+}
+
+.prose h6 {
+	--at-apply: font-semibold mb-2;
+}
+
+.prose p:not(:last-child) {
+	--at-apply: mb-3;
+}
+
+.prose p:not(:first-child) {
+	--at-apply: mt-3;
+}
+
+.prose strong {
+	--at-apply: font-bold;
+}
+
+.prose em {
+	--at-apply: font-italic;
+}
+
+.prose a {
+	--at-apply: text-primary11;
+}
+
+.prose a:hover {
+	text-decoration: underline;
+}
+
+.prose ul,
+.prose ol {
+	--at-apply: my-3;
+}
+
+.prose ul {
+	--at-apply: list-disc list-inside;
+}
+
+.prose ol {
+	--at-apply: list-decimal list-inside;
+}
+
+.prose li p,
+.prose li h1 {
+	--at-apply: inline;
+}
+
+.prose ul > li li,
+ol > li li {
+	--at-apply: ml-5;
+}
+
+.prose hr {
+	--at-apply: border-base3 my-4;
+}
+
+.prose.editor hr {
+	--at-apply: border-base4 my-4;
+}
+
+.prose pre.astro-code {
+	--at-apply: p-4 rounded-sm;
+}

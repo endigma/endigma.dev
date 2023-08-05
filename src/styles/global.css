@@ -1,0 +1,15 @@
+body {
+	font-family: "Iosevka Aile", sans-serif;
+}
+
+@media screen {
+	.print-only {
+		display: none;
+	}
+}
+
+@media print {
+	.screen-only {
+		display: none;
+	}
+}

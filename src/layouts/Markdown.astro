@@ -1,0 +1,14 @@
+---
+const { frontmatter } = Astro.props
+
+import TitleHero from "$components/TitleHero.astro"
+import Layout from "$layouts/Layout.astro"
+import "../styles/prose.css"
+---
+
+<Layout title={frontmatter.title}>
+	<TitleHero title={frontmatter.title} />
+	<main class="w-full mx-auto max-w-4xl px-8 prose">
+		<slot />
+	</main>
+</Layout>

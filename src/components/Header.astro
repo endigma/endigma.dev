@@ -1,0 +1,27 @@
+---
+import ThemeToggle from "$components/ThemeToggle.astro"
+---
+
+<header class="screen-only w-full flex flex-row justify-center bg-base2 border-b border-base6">
+	<div class="flex flex-row w-full max-w-7xl justify-between">
+		<div
+			class="px-8 py-4 items-center flex flex-col justify-center sm:justify-start sm:flex-row sm:gap-4 flex-grow">
+			<h1 class="px-8 py-4 text-2xl"><a href="/">Jesse Thompson</a></h1>
+			<div class="flex flex-row gap-4 items-center">
+				<a class="text-primary11 hover:underline" href="/">Home</a>
+				<a class="text-primary11 hover:underline" href="/guides">Guides</a>
+				<a class="text-primary11 hover:underline" href="/contact">Contact</a>
+			</div>
+		</div>
+		<div class="hidden sm:flex px-8 py-4 items-center flex-row gap-4">
+			<ThemeToggle />
+		</div>
+	</div>
+</header>
+<header class="print-only w-full flex flex-row justify-center bg-base2 border-b border-base6">
+	<h1 class="px-8 py-4 text-2xl">Jesse Thompson</h1>
+</header>
+
+<div class="sm:hidden items-center flex flex-row gap-4 absolute right-5 top-5">
+	<ThemeToggle />
+</div>

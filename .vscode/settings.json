@@ -1,0 +1,14 @@
+{
+	"css.lint.unknownAtRules": "ignore",
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	// makes it possible to click links with [parameters] in them
+	"terminal.integrated.wordSeparators": " {}',\"`─‘’",
+}
