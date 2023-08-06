@@ -28,10 +28,12 @@ export default defineConfig({
 		presetIcons(),
 	],
 	variants: [
-		// print:
-
-		variantMatcher("darktheme", (input) => ({ prefix: `.dark-theme $$ ${input.prefix}` })),
-		variantMatcher("lighttheme", (input) => ({ prefix: `:not(.dark-theme) $$ ${input.prefix}` })),
+		variantMatcher("darktheme", (input) => ({
+			prefix: `.dark-theme $$ ${input.prefix}`,
+		})),
+		variantMatcher("lighttheme", (input) => ({
+			prefix: `:not(.dark-theme) $$ ${input.prefix}`,
+		})),
 
 		variantParentMatcher("print", "@media print"),
 		variantParentMatcher("screen", "@media screen"),
@@ -52,7 +54,9 @@ export function variantParentMatcher(name: string, parent: string): VariantObjec
 		name,
 		match(input, ctx) {
 			if (!re)
-				re = new RegExp(`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`)
+				re = new RegExp(
+					`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`
+				)
 
 			const match = input.match(re)
 			if (match) {
@@ -72,14 +76,16 @@ export function variantParentMatcher(name: string, parent: string): VariantObjec
 
 export function variantMatcher(
 	name: string,
-	handler: (input: VariantHandlerContext) => Record<string, any>,
+	handler: (input: VariantHandlerContext) => Record<string, any>
 ): VariantObject {
 	let re: RegExp
 	return {
 		name,
 		match(input, ctx) {
 			if (!re)
-				re = new RegExp(`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`)
+				re = new RegExp(
+					`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`
+				)
 
 			const match = input.match(re)
 			if (match) {

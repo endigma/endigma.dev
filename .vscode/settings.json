@@ -10,5 +10,5 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	// makes it possible to click links with [parameters] in them
-	"terminal.integrated.wordSeparators": " {}',\"`─‘’",
+	"terminal.integrated.wordSeparators": " {}',\"`─‘’"
 }

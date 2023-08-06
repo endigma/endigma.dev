@@ -8,6 +8,7 @@ title: Fix Windows Destroying Grub2
 > cortana: ohh i saw your grub2 install, i thought it was bad so i deleted it oops
 
 ## ubuntu livecd:
+
 other rescue disk probably works too
 
 replace `/dev/nvme0n1pX` with your actual device names

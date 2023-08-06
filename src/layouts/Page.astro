@@ -1,8 +1,8 @@
 ---
 interface Props {
-	title: string
-	hero?: boolean
-	heroTitle?: string
+  title: string
+  hero?: boolean
+  heroTitle?: string
 }
 
 const { title, hero = true, heroTitle } = Astro.props
@@ -13,8 +13,8 @@ import "$styles/prose.css"
 ---
 
 <Layout title={title}>
-	{hero && <TitleHero title={heroTitle ? heroTitle : title} />}
-	<main class="w-full mx-auto max-w-4xl px-8">
-		<slot />
-	</main>
+  {hero && <TitleHero title={heroTitle ? heroTitle : title} />}
+  <main class="w-full mx-auto max-w-4xl px-8">
+    <slot />
+  </main>
 </Layout>

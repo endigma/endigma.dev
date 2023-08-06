@@ -1,14 +1,14 @@
 ---
 interface Props {
-	title: string
-	href: string | undefined
+  title: string
+  href: string | undefined
 }
 
 const { title, href } = Astro.props
 ---
 
 <a
-	href={href}
-	class="block bg-base2 border-base6 border rounded-sm p-4 hover:(bg-base3 border-base7)">
-	{title}
+  href={href}
+  class="block bg-base2 border-base6 border rounded-sm p-4 hover:(bg-base3 border-base7)">
+  {title}
 </a>

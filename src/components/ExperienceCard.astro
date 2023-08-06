@@ -1,47 +1,47 @@
 ---
 interface Props {
-	title: string
-	time: string
-	techs: string[]
-	subtechs?: string[]
+  title: string
+  time: string
+  techs: string[]
+  subtechs?: string[]
 }
 
 const { title, time, techs, subtechs } = Astro.props
 ---
 
 <div class="screen:(bg-base2 shadow-sm border-base6 border rounded-sm)">
-	<div class="flex screen:p-4 bg-base3 w-full flex-col md:flex-row justify-between print:font-bold">
-		<h2>
-			{title}
-		</h2>
-		<span class="text-base11">{time}</span>
-	</div>
-	<hr class="print-only mt-4 border-black" />
-	<div class="screen:p-4 print:pt-4">
-		<p class="text-base11">
-			<slot />
-		</p>
-	</div>
-	<div class="screen-only pb-4 px-4 flex flex-col flex-wrap gap-2">
-		<div class="flex flex-row flex-wrap gap-2">
-			{
-				techs.map((tech) => (
-					<div class="rounded-sm flex-shrink-0 px-2 h-6 text-sm flex items-center bg-primary1 text-primary11 border border-primary7">
-						{tech}
-					</div>
-				))
-			}
-		</div>
-		{
-			subtechs && (
-				<div class="flex flex-row flex-wrap gap-2">
-					{subtechs.map((tech) => (
-						<div class="rounded-sm flex-shrink-0 px-2 h-6 text-sm flex items-center bg-base1 text-base11 border border-base7">
-							{tech}
-						</div>
-					))}
-				</div>
-			)
-		}
-	</div>
+  <div class="flex screen:p-4 bg-base3 w-full flex-col md:flex-row justify-between print:font-bold">
+    <h2>
+      {title}
+    </h2>
+    <span class="text-base11">{time}</span>
+  </div>
+  <hr class="print-only mt-4 border-black" />
+  <div class="screen:p-4 print:pt-4">
+    <p class="text-base11">
+      <slot />
+    </p>
+  </div>
+  <div class="screen-only pb-4 px-4 flex flex-col flex-wrap gap-2">
+    <div class="flex flex-row flex-wrap gap-2">
+      {
+        techs.map((tech) => (
+          <div class="rounded-sm flex-shrink-0 px-2 h-6 text-sm flex items-center bg-primary1 text-primary11 border border-primary7">
+            {tech}
+          </div>
+        ))
+      }
+    </div>
+    {
+      subtechs && (
+        <div class="flex flex-row flex-wrap gap-2">
+          {subtechs.map((tech) => (
+            <div class="rounded-sm flex-shrink-0 px-2 h-6 text-sm flex items-center bg-base1 text-base11 border border-base7">
+              {tech}
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
 </div>

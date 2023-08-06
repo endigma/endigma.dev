@@ -1,11 +1,7 @@
 {
-	"useTabs": true,
-	"tabWidth": 2,
 	"semi": false,
 	"printWidth": 100,
 	"singleAttributePerLine": false,
-	"trailingComma": "all",
 	"bracketSameLine": true,
-	"htmlWhitespaceSensitivity": "ignore",
 	"bracketSpacing": true
 }

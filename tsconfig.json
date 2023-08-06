@@ -14,7 +14,7 @@
 			],
 			"$assets/*": [
 				"src/assets/*"
-			],
+			]
 		},
 		// Preact specific settings
 		"jsx": "react-jsx",

@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string
+  title: string
 }
 
 const { title } = Astro.props
@@ -15,23 +15,27 @@ import { Tooltips } from "astro-tooltips"
 ---
 
 <html lang="en" class="bg-base1 text-base12">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="endigma's site" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>endigma.dev - {title}</title>
-		<script defer data-domain="endigma.dev" src="/js/script.js" data-api="/api/event"></script>
-		<Tooltips interactive={false} delay={[15, 14000]} placement="top" />
-	</head>
-	<body>
-		<div class="min-h-screen">
-			<Header />
-			<slot />
-		</div>
-		<div class="screen-only">
-			<Footer />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="endigma's site" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>endigma.dev - {title}</title>
+    {
+      import.meta.env.PROD && (
+        <script defer data-domain="endigma.dev" src="/js/script.js" data-api="/api/event" />
+      )
+    }
+    <Tooltips interactive={false} delay={[15, 14000]} placement="top" />
+  </head>
+  <body>
+    <div class="min-h-screen pb-20">
+      <Header />
+      <slot />
+    </div>
+    <div class="screen-only">
+      <Footer />
+    </div>
+  </body>
 </html>

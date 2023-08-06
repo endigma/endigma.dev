@@ -4,6 +4,7 @@ title: Obliterate CSD on Xfce4
 ---
 
 `~/.config/gtk-3.0/gtk.css`
+
 ```css
 headerbar {
 	margin-top: -100px;
@@ -20,6 +21,7 @@ headerbar separator {
 ```
 
 `~/.config/gtk-3.0/settings.ini`
+
 ```ini
 gtk-decoration-layout=""
 ```

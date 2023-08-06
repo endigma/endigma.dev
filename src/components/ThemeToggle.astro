@@ -2,56 +2,56 @@
 ---
 
 <theme-toggle>
-	<button
-		class="themeToggle w-8 aspect-square flex justify-center items-center border-primary7 border rounded-md bg-primary1 hover:(bg-primary2 border-primary8) text-primary11">
-		<div class="moon i-heroicons-moon-solid"></div>
-		<div class="sun i-heroicons-sun-solid"></div>
-	</button>
+  <button
+    class="themeToggle w-8 aspect-square flex justify-center items-center border-primary7 border rounded-md bg-primary1 hover:(bg-primary2 border-primary8) text-primary11">
+    <div class="moon i-heroicons-moon-solid"></div>
+    <div class="sun i-heroicons-sun-solid"></div>
+  </button>
 </theme-toggle>
 
 <script>
-	let theme
-	if (document) {
-		theme = localStorage.theme
-		if (theme === "light") {
-			document.documentElement.classList.remove("dark-theme")
-		} else {
-			document.documentElement.classList.add("dark-theme")
-		}
-	}
+  let theme
+  if (document) {
+    theme = localStorage.theme
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark-theme")
+    } else {
+      document.documentElement.classList.add("dark-theme")
+    }
+  }
 
-	class ThemeToggle extends HTMLElement {
-		constructor() {
-			super()
+  class ThemeToggle extends HTMLElement {
+    constructor() {
+      super()
 
-			let button = this.querySelector("button")
-			button?.addEventListener("click", () => {
-				const element = document.documentElement
-				element.classList.toggle("dark-theme")
+      let button = this.querySelector("button")
+      button?.addEventListener("click", () => {
+        const element = document.documentElement
+        element.classList.toggle("dark-theme")
 
-				const isDark = element.classList.contains("dark-theme")
-				localStorage.setItem("theme", isDark ? "dark" : "light")
-			})
-		}
-	}
+        const isDark = element.classList.contains("dark-theme")
+        localStorage.setItem("theme", isDark ? "dark" : "light")
+      })
+    }
+  }
 
-	customElements.define("theme-toggle", ThemeToggle)
+  customElements.define("theme-toggle", ThemeToggle)
 </script>
 
 <style>
-	.moon {
-		display: none;
-	}
+  .moon {
+    display: none;
+  }
 
-	.sun {
-		display: block;
-	}
+  .sun {
+    display: block;
+  }
 
-	:global(.dark-theme) .sun {
-		display: none;
-	}
+  :global(.dark-theme) .sun {
+    display: none;
+  }
 
-	:global(.dark-theme) .moon {
-		display: block;
-	}
+  :global(.dark-theme) .moon {
+    display: block;
+  }
 </style>
