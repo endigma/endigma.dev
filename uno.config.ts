@@ -1,9 +1,17 @@
 import transformerDirectives from "@unocss/transformer-directives"
 import transformerVariantGroup from "@unocss/transformer-variant-group"
-import { VariantObject, defineConfig, escapeRegExp, presetIcons, presetUno } from "unocss"
-import { presetRadix, radixColors, type RadixColors } from "unocss-preset-radix"
+import {
+	VariantHandlerContext,
+	VariantObject,
+	defineConfig,
+	escapeRegExp,
+	presetIcons,
+	presetUno,
+} from "unocss"
+import { presetRadix, type RadixColors } from "unocss-preset-radix"
 
-const palette = radixColors
+const palette: RadixColors[] = ["sage", "mint"]
+
 const aliases: { [key: string]: RadixColors } = {
 	base: "sage",
 	primary: "mint",
@@ -21,6 +29,10 @@ export default defineConfig({
 	],
 	variants: [
 		// print:
+
+		variantMatcher("darktheme", (input) => ({ prefix: `.dark-theme $$ ${input.prefix}` })),
+		variantMatcher("lighttheme", (input) => ({ prefix: `:not(.dark-theme) $$ ${input.prefix}` })),
+
 		variantParentMatcher("print", "@media print"),
 		variantParentMatcher("screen", "@media screen"),
 	],
@@ -40,9 +52,7 @@ export function variantParentMatcher(name: string, parent: string): VariantObjec
 		name,
 		match(input, ctx) {
 			if (!re)
-				re = new RegExp(
-					`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`,
-				)
+				re = new RegExp(`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`)
 
 			const match = input.match(re)
 			if (match) {
@@ -52,6 +62,33 @@ export function variantParentMatcher(name: string, parent: string): VariantObjec
 						next({
 							...input,
 							parent: `${input.parent ? `${input.parent} $$ ` : ""}${parent}`,
+						}),
+				}
+			}
+		},
+		autocomplete: `${name}:`,
+	}
+}
+
+export function variantMatcher(
+	name: string,
+	handler: (input: VariantHandlerContext) => Record<string, any>,
+): VariantObject {
+	let re: RegExp
+	return {
+		name,
+		match(input, ctx) {
+			if (!re)
+				re = new RegExp(`^${escapeRegExp(name)}(?:${ctx.generator.config.separators.join("|")})`)
+
+			const match = input.match(re)
+			if (match) {
+				return {
+					matcher: input.slice(match[0].length),
+					handle: (input, next) =>
+						next({
+							...input,
+							...handler(input),
 						}),
 				}
 			}

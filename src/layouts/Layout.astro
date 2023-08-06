@@ -5,10 +5,13 @@ interface Props {
 
 const { title } = Astro.props
 
+import Footer from "$components/Footer.astro"
+import Header from "$components/Header.astro"
 import "$styles/global.css"
-import Header from "../components/Header.astro"
 
 import "@fontsource/iosevka-aile"
+
+import { Tooltips } from "astro-tooltips"
 ---
 
 <html lang="en" class="bg-base1 text-base12">
@@ -20,9 +23,13 @@ import "@fontsource/iosevka-aile"
 		<meta name="generator" content={Astro.generator} />
 		<title>endigma.dev - {title}</title>
 		<script defer data-domain="endigma.dev" src="/js/script.js" data-api="/api/event"></script>
+		<Tooltips interactive={false} delay={[15, 14000]} placement="top" />
 	</head>
 	<body>
-		<Header />
-		<slot />
+		<div class="min-h-screen">
+			<Header />
+			<slot />
+		</div>
+		<Footer />
 	</body>
 </html>
