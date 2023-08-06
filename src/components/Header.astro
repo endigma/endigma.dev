@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "$components/ThemeToggle.astro"
+import PageBreak from "./PageBreak.astro"
 ---
 
 <!-- Header -->
@@ -32,6 +33,12 @@ import ThemeToggle from "$components/ThemeToggle.astro"
 		</div>
 	</div>
 </header>
+
+<header class="print-only w-full mt-100 flex flex-row justify-center">
+	<h1 class="px-8 py-4 text-2xl">Jesse Thompson</h1>
+</header>
+
+<PageBreak />
 
 <div class="sm:hidden items-center flex flex-row gap-4 absolute right-8 top-4">
 	<ThemeToggle />
