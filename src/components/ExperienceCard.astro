@@ -9,16 +9,15 @@ interface Props {
 const { title, time, techs, subtechs } = Astro.props
 ---
 
-<hr class="print-only" />
 <div class="screen:(bg-base2 shadow-sm border-base6 border rounded-sm)">
-	<div
-		class="flex screen:p-4 bg-base3 w-full flex-col md:flex-row justify-between print:font-bold">
+	<div class="flex screen:p-4 bg-base3 w-full flex-col md:flex-row justify-between print:font-bold">
 		<h2>
 			{title}
 		</h2>
 		<span class="text-base11">{time}</span>
 	</div>
-	<div class="screen:p-4 print:(pt-4)">
+	<hr class="print-only mt-4" />
+	<div class="screen:p-4 print:pt-4">
 		<p class="text-base11">
 			<slot />
 		</p>

@@ -1,56 +1,15 @@
 ---
-import Card from "$components/ExperienceCard.astro"
-import PageBreak from "$components/PageBreak.astro"
+import Experience from "$components/sections/Experience.astro"
+import Intro from "$components/sections/Intro.astro"
 import Page from "$layouts/Page.astro"
 ---
 
 <Page title="Home" heroTitle="Hello!">
 	<div class="flex flex-col gap-2 text-lg mb-10">
-		<p>
-			Hello! I'm Jesse, a software engineer based in Nova Scotia, Canada. I work at Hussle building
-			next generation hiring tools. I'm known to wear as many hats as possible, and love
-			multi-discliplinary workloads.
-		</p>
-		<p>
-			When I'm not working, I spend my time tinkering with my home servers, endlessly breaking and
-			repairing my 3d printer and making things out of wood.
-		</p>
+		<Intro />
 
 		<hr class="border-base6 my-4" />
 
-		<PageBreak />
-
-		<h1 class="text-3xl font-semibold">Work Experience</h1>
-		<div class="flex flex-col gap-4 mt-4">
-			<Card
-				title="Lead Engineer @ Hussle Inc"
-				time="Dec 2021 - (Current)"
-				techs={["Golang", "SvelteKit", "PostgreSQL", "GraphQL"]}
-				subtechs={[
-					"Docker",
-					"Fly.io",
-					"Github Actions",
-					"Nix",
-					"OpenTelemetry",
-					"Houdini",
-					"UnoCSS",
-				]}>
-				I currently work at Hussle Inc developing next generation resume-less hiring tools. In
-				addition to leading the engineering team, I also work on project architecture, CI/CD,
-				database admin and frontend design. I have lead the complete development of our current
-				primary product from a whiteboard to an MVP to continuing updates.
-			</Card>
-			<Card
-				techs={["Golang", "Hotwire Stimulus/Turbo", "AlpineJS", "PostgreSQL"]}
-				subtechs={["Bun", "TailwindCSS", "Twilio", "SendGrid", "Stripe"]}
-				title="Junior Software Developer @ Hussle Inc"
-				time="May 2021 - Dec 2021 (Promoted)">
-				I started at Hussle in the spring of 2021 as a Junior Software Developer, I spent my time
-				working under the CTO on our Golang SSR codebase. I was the primary contributor at this
-				point, as our CTO didn't work on the codebase full time, and I brought our app from a bare
-				MVP to a working product that was taken to market. After the CTO departed to focus on their
-				main job, I was given the opportunity to prove myself as the new leader of the team.
-			</Card>
-		</div>
+		<Experience />
 	</div>
 </Page>
