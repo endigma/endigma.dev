@@ -1,29 +1,9 @@
 ---
-import { cva } from "class-variance-authority"
-const social = cva("flex flex-row gap-2 items-center text-primary11 hover:underline")
+import Socials from "$components/Socials.astro"
 ---
 
 <div class="flex flex-row justify-center bg-base2 border-t border-base6">
 	<div class="flex flex-row gap-4 py-2">
-		<a href="//github.com/endigma" class={social()}>
-			<div class="i-bx-bxl-github"></div>
-			GitHub
-		</a>
-		<a href="//gitlab.com/endigma" class={social()}>
-			<div class="i-bx-bxl-gitlab"></div>
-			GitLab
-		</a>
-		<a href="//gitcat.ca/endigma" class={social()}>
-			<div class="i-simple-icons-gitea"></div>
-			Gitea
-		</a>
-		<a href="mailto:endigma@mailcat.ca" class={social()}>
-			<div class="i-bx-bxs-envelope"></div>
-			Email
-		</a>
-		<a href="//www.linkedin.com/in/4426" class={social()}>
-			<div class="i-bx-bxl-linkedin-square"></div>
-			LinkedIn
-		</a>
+		<Socials />
 	</div>
 </div>

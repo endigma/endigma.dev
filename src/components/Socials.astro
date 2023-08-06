@@ -1,0 +1,25 @@
+---
+import { cva } from "class-variance-authority"
+const social = cva("flex flex-row gap-2 items-center text-primary11 hover:underline")
+---
+
+<a href="//github.com/endigma" class={social()}>
+	<div class="i-bx-bxl-github"></div>
+	GitHub
+</a>
+<a href="//gitlab.com/endigma" class={social()}>
+	<div class="i-bx-bxl-gitlab"></div>
+	GitLab
+</a>
+<a href="//gitcat.ca/endigma" class={social()}>
+	<div class="i-simple-icons-gitea"></div>
+	Gitea
+</a>
+<a href="mailto:endigma@mailcat.ca" class={social()}>
+	<div class="i-bx-bxs-envelope"></div>
+	Email
+</a>
+<a href="//www.linkedin.com/in/4426" class={social()}>
+	<div class="i-bx-bxl-linkedin-square"></div>
+	LinkedIn
+</a>
