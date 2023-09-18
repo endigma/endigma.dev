@@ -24,11 +24,7 @@ import { Tooltips } from "astro-tooltips"
     <title>endigma.dev - {title}</title>
     {
       import.meta.env.PROD && (
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "49f5630d200a4c1983063aae8c6bad02"}'
-        />
+        <script defer data-domain="endigma.dev" src="/js/script.js" data-api="/api/event" />
       )
     }
     <Tooltips interactive={false} delay={[15, 14000]} placement="top" />
