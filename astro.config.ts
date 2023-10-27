@@ -1,8 +1,7 @@
 import mdx from "@astrojs/mdx"
 import { defineConfig } from "astro/config"
 import uno from "unocss/astro"
-
-import preact from "@astrojs/preact"
+import svelte from "@astrojs/svelte"
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +16,6 @@ export default defineConfig({
 			injectReset: true,
 		}),
 		mdx(),
-		preact(),
+		svelte(),
 	],
 })

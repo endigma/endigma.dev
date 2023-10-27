@@ -10,7 +10,7 @@ import {
 } from "unocss"
 import { presetRadix, type RadixColors } from "unocss-preset-radix"
 
-const palette: RadixColors[] = ["sage", "mint"]
+const palette: RadixColors[] = ["sage", "mint", "red"]
 
 const aliases: { [key: string]: RadixColors } = {
 	base: "sage",
@@ -30,9 +30,6 @@ export default defineConfig({
 	variants: [
 		variantMatcher("darktheme", (input) => ({
 			prefix: `.dark-theme $$ ${input.prefix}`,
-		})),
-		variantMatcher("lighttheme", (input) => ({
-			prefix: `:not(.dark-theme) $$ ${input.prefix}`,
 		})),
 
 		variantParentMatcher("print", "@media print"),
