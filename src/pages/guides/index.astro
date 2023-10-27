@@ -2,7 +2,7 @@
 import GuideLink from "$components/GuideLink.astro"
 import Page from "$layouts/Page.astro"
 
-const guides = await Astro.glob("./*.md")
+const guides = await Astro.glob("./*.md*")
 ---
 
 <Page title="Guides">
