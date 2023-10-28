@@ -1,11 +1,11 @@
 ---
 import Page from "$layouts/Page.astro"
 
-const guides = await Astro.glob("./*.md*")
+const guides = await Astro.glob("./**/index.mdx")
 ---
 
-<Page title="Guides">
-  <p>Here is where I store some poorly written reference guides for doing various things.</p>
+<Page title="Toys">
+  <p>Doohickeys, tools and games</p>
   <div class="flex flex-col gap-2 mt-4">
     {
       guides.map((guide) => (

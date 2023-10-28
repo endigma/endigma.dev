@@ -20,18 +20,15 @@ const aliases: { [key: string]: RadixColors } = {
 export default defineConfig({
 	presets: [
 		presetUno(),
-		// @ts-expect-error TODO: Update unocss-preset-radix
 		presetRadix({
+			darkSelector: ":root",
+			lightSelector: ".never",
 			palette: palette,
 			aliases: aliases,
 		}),
 		presetIcons(),
 	],
 	variants: [
-		variantMatcher("darktheme", (input) => ({
-			prefix: `.dark-theme $$ ${input.prefix}`,
-		})),
-
 		variantParentMatcher("print", "@media print"),
 		variantParentMatcher("screen", "@media screen"),
 	],

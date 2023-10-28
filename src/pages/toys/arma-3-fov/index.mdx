@@ -1,0 +1,18 @@
+---
+layout: $layouts/Markdown.astro
+title: Arma 3 FOV Calculator
+---
+
+import Arma3FoV from "./_lib/Arma3FoV.svelte"
+
+<Arma3FoV client:load />
+
+It's important to note that changing these values will mess with the ranging and zooming of every scope in the game, especially overlay-based scopes. Those do not scale with the viewemodel and will be inaccurate when the zoom is non-default.
+
+I recommend the following values:
+
+Infantry/Normal Ops: 90
+
+Infantry/CQB (KotH, etc): 95-120 (your mildots _will_ be inaccurate)
+
+Vehicles/Helicopters/Jets: 95-110 (higher values can make it difficult to see mines, enemies)
