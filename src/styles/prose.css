@@ -1,21 +1,21 @@
 .prose h1 {
-	--at-apply: text-4xl font-semibold mb-1 mt-4;
+	--at-apply: text-3xl font-semibold mb-2 mt-4;
 }
 
 .prose h2 {
-	--at-apply: text-3xl font-semibold mb-1 mt-4;
+	--at-apply: text-2xl font-semibold mb-2 mt-4;
 }
 
 .prose h3 {
-	--at-apply: text-2xl font-semibold mb-1 mt-4;
+	--at-apply: text-xl font-semibold mb-2 mt-4;
 }
 
 .prose h4 {
-	--at-apply: text-xl font-semibold mb-1 mt-4;
+	--at-apply: text-lg font-semibold mb-2 mt-4;
 }
 
 .prose h5 {
-	--at-apply: text-lg font-semibold mb-1 mt-4;
+	--at-apply: font-bold mb-2;
 }
 
 .prose h6 {
@@ -62,6 +62,14 @@
 .prose li p,
 .prose li h1 {
 	--at-apply: inline;
+}
+
+.prose {
+	font-family: "Inter Variable", sans-serif;
+}
+
+.prose p > code {
+	--at-apply: bg-base4;
 }
 
 .prose ul > li li,
