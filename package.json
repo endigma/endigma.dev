@@ -30,6 +30,8 @@
 		"vitest": "^0.34.6"
 	},
 	"devDependencies": {
+		"@flydotio/dockerfile": "^0.5.4",
 		"@fontsource-variable/inter": "^5.0.16"
-	}
+	},
+	"packageManager": "pnpm@8.15.6"
 }
