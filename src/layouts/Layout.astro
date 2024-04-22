@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string
+	title: string
 }
 
 const { title } = Astro.props
@@ -12,69 +12,69 @@ import "@fontsource/iosevka-aile"
 ---
 
 <html lang="en" class="bg-base1 text-base12">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="endigma's site" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>endigma.dev - {title}</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="endigma's site" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>endigma.dev - {title}</title>
 
-    <style>
-      .social {
-        --at-apply: flex flex-row gap-2 items-center text-primary11 hover: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="min-h-screen pb-20">
-      <!-- Header -->
-      <header class="screen-only flex justify-center bg-base2">
-        <!-- Inner container -->
-        <div
-          class="flex flex-col sm:flex-row items-center w-full max-w-7xl justify-center sm:justify-between">
-          <!-- Left header -->
-          <div class="flex flex-col sm:flex-row px-8 py-6 sm:py-4 items-center">
-            <!-- Name -->
-            <h1 class="text-2xl"><a href="/">endigma's site</a></h1>
-          </div>
+		<style>
+			.social {
+				--at-apply: flex flex-row gap-2 items-center text-primary11 hover: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="min-h-screen pb-20">
+			<!-- Header -->
+			<header class="screen-only flex justify-center bg-base2">
+				<!-- Inner container -->
+				<div
+					class="flex flex-col sm:flex-row items-center w-full max-w-7xl justify-center sm:justify-between">
+					<!-- Left header -->
+					<div class="flex flex-col sm:flex-row px-8 py-6 sm:py-4 items-center">
+						<!-- Name -->
+						<h1 class="text-2xl"><a href="/">endigma's site</a></h1>
+					</div>
 
-          <!-- Right header -->
-          <div class="flex flex-row px-8 pt-0 sm:pt-4 pb-4 items-center">
-            <!-- Nav -->
-            <div class="flex flex-grow-0 flex-row gap-4 items-center px-8">
-              <a class="text-primary11 hover:underline" href="/toys">Toys</a>
-              <a class="text-primary11 hover:underline" href="/resume">Resume</a>
-              <a class="text-primary11 hover:underline" href="/guides">Guides</a>
-              <a class="text-primary11 hover:underline" href="/contact">Contact</a>
-            </div>
-          </div>
-        </div>
-      </header>
+					<!-- Right header -->
+					<div class="flex flex-row px-8 pt-0 sm:pt-4 pb-4 items-center">
+						<!-- Nav -->
+						<div class="flex flex-grow-0 flex-row gap-4 items-center px-8">
+							<a class="text-primary11 hover:underline" href="/toys">Toys</a>
+							<a class="text-primary11 hover:underline" href="/resume">Resume</a>
+							<a class="text-primary11 hover:underline" href="/guides">Guides</a>
+							<a class="text-primary11 hover:underline" href="/contact">Contact</a>
+						</div>
+					</div>
+				</div>
+			</header>
 
-      <slot />
-    </div>
-    <div class="screen-only">
-      <div class="flex flex-row justify-center bg-base2 border-t border-base6">
-        <div class="flex flex-row gap-4 py-2">
-          <a href="//github.com/endigma" class="social">
-            <div class="i-bx-bxl-github"></div>
-             GitHub
-          </a>
-          <a href="//gitlab.com/endigma" class="social">
-            <div class="i-bx-bxl-gitlab"></div>
-             GitLab
-          </a>
-          <a href="//gitcat.ca/endigma" class="social">
-            <div class="i-simple-icons-gitea"></div>
-             Gitea
-          </a>
-          <a href="mailto:endigma@mailcat.ca" class="social">
-            <div class="i-bx-bxs-envelope"></div>
-             Email
-          </a>
-        </div>
-      </div>
-    </div>
-  </body>
+			<slot />
+		</div>
+		<div class="screen-only">
+			<div class="flex flex-row justify-center bg-base2 border-t border-base6">
+				<div class="flex flex-row gap-4 py-2">
+					<a href="//github.com/endigma" class="social">
+						<div class="i-bx-bxl-github"></div>
+						GitHub
+					</a>
+					<a href="//gitlab.com/endigma" class="social">
+						<div class="i-bx-bxl-gitlab"></div>
+						GitLab
+					</a>
+					<a href="//gitcat.ca/endigma" class="social">
+						<div class="i-simple-icons-gitea"></div>
+						Gitea
+					</a>
+					<a href="mailto:gentle.dust1217@fastmail.com" class="social">
+						<div class="i-bx-bxs-envelope"></div>
+						Email
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
