@@ -17,5 +17,7 @@ export default defineConfig({
         injectReset: true
     }), mdx(), svelte()],
     output: "server",
-    adapter: cloudflare()
+    adapter: cloudflare({
+    	imageService: 'cloudflare'
+    })
 });
